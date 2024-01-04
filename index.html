@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="tcgc_logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap" rel="stylesheet">
+    <title>TCGC | Luxmundis Cup 2023</title>
+    <style>
+        body {
+            background: url('tcgc.png');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            font-family: 'League Spartan', sans-serif;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .logo {
+            display: flex;
+            position: absolute;
+            top: -95px;
+            justify-content: space-between;
+            margin: auto;
+            padding: 30px;
+        }
+
+        .welcome {
+            color: rgba(255, 255, 255, 0.8);
+            display: grid;
+            position: relative;
+            top: 150px;
+            font-size: 50px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 10px;
+        }
+
+        .tcgc, .bscs{
+			display: flex;
+			justify-content: space-evenly;
+			position: relative;
+			bottom: -250px;
+			right: -640px;
+			margin: auto;
+			height: 60px;
+			cursor: pointer;
+		}
+
+        .showLogin{
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-block;
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            background: #195E2F;
+            color: #FFFFFF;
+            border-radius: 8px;
+            padding: 14px 24px 16px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1;
+            transition: transform 200ms, background 500ms;
+            z-index: 1;
+        }
+
+
+        .showLogin:hover{
+            background: #89A891;
+        }
+
+        .lower {
+            color: white;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            bottom: -320px;
+        }
+
+        .container-login{
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 30px;
+            padding: 50px;
+            width: 250px;
+            height: auto;
+            align-items: center;
+            margin: auto;
+            margin-top: -20px;
+            border: none;
+            border-radius: 8px;
+            position: absolute;
+            transition: opacity 200ms, visibility 0s linear 0s;
+            visibility: hidden;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #email-login, #pass-login {
+            background-color: #e6e6e6;
+            width: 225px;
+            border: rgb(223, 223, 223) solid;
+            border-radius: 2px;
+        }
+
+        #loginBtn{
+            outline: 0;
+            border: 0;
+            cursor: pointer;
+            background: #195E2F;
+            color: #FFFFFF;
+            border-radius: 4px;
+            padding: 6px 10px 9px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: transform 200ms, background 200ms;
+        
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            width: 20px;
+            height: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <div class="logo"><img src="logo.png" style="height: 250px;" alt="logo"></div>
+        <div class="welcome"><p><b>THE LIGHT OF THE WORLD<br>TANGUB CITY GLOBAL COLLEGE</b></p></div>
+
+        <input type="button" id="show-login" class="showLogin" value="Login">
+        
+    </div>
+
+    <div class="container-login">
+        <div class="close-btn" onclick="closeContainerLogin()">&times;</div>
+        <form class="form-login">
+            <h2>Login</h2><hr>
+            <label class="email">Email: </label><br>
+            <input type="email" id="email-login" placeholder="milli@example.com" required><br>
+            <label class="email">Password: </label><br>
+            <input type="password" id="pass-login" required><br>
+            <br>
+            <button class="btn" type="button" id="loginBtn" onclick="performLogin()">Login</button><br><br>
+        </form>
+    </div>
+
+    <div class="lower"><p>❝Your access to success. Light of the World. Integrity, Compassion, & Excellence.❞</p></div>
+    <div>
+		<a href="https://web.facebook.com/groups/617470232285960" target="_blank"><img class="bscs" src="institute_logo.png" alt="BSCS Logo"></a>
+		<a href="https://web.facebook.com/tcgcluxmundi" target="_blank"><img class="tcgc" src="tcgc_logo.png" alt="TCGC Logo"></a>
+	</div>
+    
+    <script>
+        function closeContainerLogin() {
+            const container = document.querySelector(".container-login");
+            container.style.opacity = 0; 
+            setTimeout(() => {
+                container.style.visibility = "hidden";
+                container.style.opacity = 1;
+            }, 300);
+        }
+
+
+        document.querySelector("#show-login").addEventListener("click", function(){
+            const container = document.querySelector(".container-login");
+            container.style.visibility = "visible";
+        });
+
+        function performLogin() {
+            const email = document.getElementById('email-login').value;
+            const password = document.getElementById('pass-login').value;
+
+            if (email === 'admin@tcgc.edu.ph' && password === 'tcgcadmin') {
+                alert('Login successful!');
+                closeContainerLogin();
+                setTimeout(function (){
+                    openHome();
+                }, 1000);
+                 
+            } else {
+                alert('Invalid email or password');
+            }
+        }
+        
+        function openHome() {
+            window.location.href = 'home.html'; 
+        }
+    
+    </script>
+
+</body>
+</html>
+
+
+
+<!--------
+   <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-analytics.js";
+        import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword,
+        signOut,
+        } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-auth.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+        apiKey: "AIzaSyDQcPwaN6TPfWt_4SJ3tZGXLZS3KvAHsJs",
+        authDomain: "finals-fea03.firebaseapp.com",
+        projectId: "finals-fea03",
+        storageBucket: "finals-fea03.appspot.com",
+        messagingSenderId: "986655721121",
+        appId: "1:986655721121:web:6e604a9b4899e1027192e0",
+        measurementId: "G-V5ST3FDXLZ",
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const auth = getAuth();
+        console.log(app);
+
+        //----- Login code start
+        document.getElementById("login").addEventListener("click", function () {
+        var email = document.getElementById("login_email").value;
+        var password = document.getElementById("login_password").value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+            // Signed in
+            const user = userCredential.user;
+            console.log(user);
+            window.location.href = "home.html"; // Change to your success page URL
+            document.getElementById("logout").style.display = "block";
+            // ...
+            })
+            .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorMessage);
+            alert(errorMessage);
+            });
+        });
+        //----- End
+
+
+    </script>
+        
+          
+
+------->

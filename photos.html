@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="tcgc_logo.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+	 	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap" rel="stylesheet">
+
+	<title>Photos | Luxmundis Cup 2023</title>
+
+	<style>
+		body {
+			background-color: white;
+			font-family: 'League Spartan', sans-serif;
+			padding: 10px;
+			margin: 0;
+			height: 1000px;
+		}
+
+		.navbar {
+			background-color: #195E2F;
+            display: flex;
+			height: 20px;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 0;
+            padding: 30px;
+            font-size: 18px;	 	
+		}
+
+		.navbar ul{
+            display: flex;
+            list-style: none;
+            margin: 10px 20px;
+			margin-left: 110px;
+        }
+
+		.navbar ul li{
+			padding: 10px 30px;
+			position: relative;
+		}
+
+		.navbar ul li a{
+			position: relative;
+			color: #d3d1d1;
+			font-family: 'Poppins' sans-serif;
+			text-decoration: none;
+			letter-spacing: 0.5px;
+			padding: 0 10px;
+		}
+
+		.navbar ul li a:after{
+			content: "";
+			position: absolute;
+			background-color: white;
+			height: 3px;
+			width: 0%;
+			left: 0px;
+			bottom: -9px;
+			transition: 0.3s;
+						
+		}
+
+		.navbar ul li a:hover{
+			color: white;
+		}
+
+		.navbar ul li a:hover:after{
+			width: 100%;
+			
+		}
+
+		.logo{
+            display: flex;
+            position: absolute;
+            top: -95px;
+            margin: auto;
+            padding: 30px;
+        }
+
+		.dropdown_menu{
+			display: none;
+		}
+
+		.navbar ul li:hover .dropdown_menu{
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 100%;
+			background-color: #195E2F;
+		}
+
+		.dropdown_menu ul{
+			display: block;
+			margin: 10px;
+		}
+
+		.dropdown_menu ul li{
+			width: 150px;
+			padding: 10px;
+		}
+		
+		.day-1{
+			display: flex;
+			justify-content: space-evenly;
+			height: 500px;
+			width: 96%;
+			align-items: center;
+			font-size: 16px;
+		}
+		.day-2{
+			display: flex;
+			justify-content: space-evenly;
+			height: 500px;
+			width: 96%;
+			position: absolute;
+			align-items: center;
+			top: 500px;
+			font-size: 16px;
+		}
+		.day-3{
+			display: flex;
+			justify-content: space-evenly;
+			height: 500px;
+			width: 96%;
+			position: absolute;
+			align-items: center;
+			top: 900px;
+			font-size: 16px;
+		}
+		.day-4{
+			display: flex;
+			justify-content: space-evenly;
+			height: 500px;
+			width: 96%;
+			position: absolute;
+			align-items: center;
+			top: 1300px;
+			font-size: 16px;
+		}
+		.day-5{
+			display: flex;
+			justify-content: space-evenly;
+			height: 500px;
+			width: 96%;
+			position: absolute;
+			align-items: center;
+			top: 1700px;
+			font-size: 16px;
+		}
+
+		.box1, .box2, .box3{
+			position: relative;
+			border: solid  #195E2F;
+			border-radius: 7px;
+			justify-content: center;
+			align-items: center;
+			width: 200px;
+			height: 250px;
+			padding: 30px;
+			text-align: justify;
+		}
+		.photo{
+			border: none;
+			border-radius: 7px;
+			width: 200px;
+			height: 150px;
+			display: flex;
+			justify-content: center;
+		}
+		
+		.title{
+			color: #195E2F;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<nav class="navbar">
+			<img src="mlogo.png" style="height: 250px;" alt="tcgc_logo">
+			<ul class="menu">
+				<li><a href="home.html" type="activate">Home</a></li>
+				<li><a href="#">Gallery <i class="fas fa-caret-down"></i></a>
+					<div class="dropdown_menu">
+						<ul>
+							<li><a href="photos.html">Photos</a></li>
+							<li><a href="videos.html">Videos</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="index.html">Logout</a></li>
+			</ul>
+		</nav>
+		
+	</div>
+	<div class="day-1">
+		<h2>Day 1</h2>
+		<div class="box1">
+			<img src="/day1/pic.jpg" class="photo">
+			<p>	TCGC Hymn Practice we took some pictures and memories to cherish.</p>
+		</div>
+
+		<div class="box2">
+			 <img src="/day1/pagarbohay.png" class="photo">
+			 <p><span class="title">TCGC Hymn Competition.</span> Despite the rainy weather, the opening of Luxmundis Cup 2023 has been successful, 
+				and participants in Pagarbohay creatively performed.</p>
+		</div>
+
+		<div class="box3">
+			<img src="/day1/basketball.jpg" class="photo">
+			<p><span class="title">TCGC Basketball Game.</span> The Institute of Computer Studies vs. Institute of Arts and Sciences</p>
+	   </div>
+	</div>
+
+	<div class="day-2">
+		<h2>Day 2</h2>
+		<div class="box1">
+			<img src="/day2/ics.jpg" class="photo">
+			<p><span class="title">Cheerdance Competition 2023.</span> The Institute of Computer Studies showed their skills in dancing, tumbling,  
+				and teamwork that led to successful performances.</p>
+		</div>
+
+		<div class="box2">
+			 <img src="/day2/mr&ms.jpg" class="photo">
+			 <p><span class="title">Mr. & Ms. Luxmundis Cup 2023.</span> The candidates of the Institute of Computer Studies,
+				Mr. John Marlo Andrade and Ms. Angelie Sambulan.</p>
+		</div>
+
+		<div class="box3">
+			<img src="/day2/volleyball.jpg" class="photo">
+			<p><span class="title">Volleyball Mens Game.</span> Computer Studies volleyball players uses their power and knowledge to win
+				in the game.</p>
+	   </div>
+	</div>
+
+	<div class="day-3">
+		<h2>Day 3</h2>
+		<div class="box1">
+			<img src="/day3/ics vs. ias.jpg" class="photo">
+			<p><span class="title">Sepak Takraw.</span> Institute of Computer Studies vs. Institute of Arts and Sciences</p>
+		</div>
+
+		<div class="box2">
+			 <img src="/day3/chess.jpg" class="photo">
+			 <p><span class="title">Chess.</span> David Aaron Sabacahan from the Institute of Computer Studies got champion in the second board
+				of chess.</p>
+		</div>
+
+		<div class="box3">
+			<img src="/day3/tennis.png" class="photo">
+			<p><span class="title">Table Tennis.</span> Ivan Liwagon got the title of champion in the game from the Institute of Computer Studies.</p>
+	   </div>
+	</div>
+
+	<div class="day-4">
+		<h2>Day 4</h2>
+		<div class="box1">	
+			<img src="/day4/ias.jpg" class="photo">
+			<p><span class="title">Sepak Takraw.</span> The players of IAS or the wizards wins against ICS/Trojans.</p>
+		</div>
+
+		<div class="box2">
+			 <img src="/day4/icje vs. ite.jpg" class="photo">
+			 <p><span class="title">Sepak Takraw.</span> Institute of Criminal Justice Education vs. Institute of Teacher Education.</p>
+		</div>
+
+		<div class="box3">
+			<img src="/day4/volleyball.png" class="photo">
+			<p><span class="title">Volleyball Men.</span> The game between the Institute of Computer Science and the Institute of Arts 
+			and Sciences is challenging.</p>
+	   </div>
+	</div>
+
+	<div class="day-5">
+		<h2>Day 5</h2>
+		<div class="box1">
+			<img src="/day5/bestindressmale.png" class="photo">
+			<p><span class="title">Best Dress Male Category.</span> Jayven Enomar from the Institute of Computer Studies.</p>
+		</div>
+
+		<div class="box2">
+			 <img src="/day5/lgbtqbestdress.png" class="photo">
+			 <p><span class="title">Best Dress LGBTQ Category.</span> Shan Astillero from the Institute of Computer Studies.</p>
+		</div>
+
+		<div class="box3">
+			<img src="/day5/1st Place.png" class="photo">
+			<p><span class="title">Gawad Pelikula 2023.</span>The Institute of Criminal Justice Education won first place in Gawad Pelikula 2023 
+				at Tangub City Global College.</p>
+	   </div>
+	</div>
+
+</body>
+</html>

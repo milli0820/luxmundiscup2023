@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="tcgc_logo.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+	 	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap" rel="stylesheet">
+
+	<title>About | Luxmundis Cup 2023</title>
+
+	<style>
+		body {
+			background-color: white;
+			font-family: 'League Spartan', sans-serif;
+			padding: 10px;
+			margin: 0;
+		}
+
+		.navbar {
+				background-color: #195E2F;
+                display: flex;
+				height: 20px;
+                align-items: center;
+                justify-content: space-evenly;
+                margin: 0;
+                padding: 30px;
+                font-size: 18px;
+				
+		}
+
+		.navbar ul{
+                display: flex;
+                list-style: none;
+                margin: 10px 20px;
+				margin-left: 110px;
+        }
+
+		.navbar ul li{
+			padding: 10px 30px;
+			position: relative;
+		}
+
+		.navbar ul li a{
+			position: relative;
+			color: #d3d1d1;
+			font-family: 'Poppins' sans-serif;
+			text-decoration: none;
+			letter-spacing: 0.5px;
+			padding: 0 10px;
+            transition: s;
+		}
+
+		.navbar ul li a:after{
+			content: "";
+			position: absolute;
+			background-color: white;
+			height: 3px;
+			width: 0%;
+			left: 0px;
+			bottom: -9px;
+			transition: 0.3s;
+						
+		}
+
+		.navbar ul li a:hover{
+			color: white;
+		}
+
+		.navbar ul li a:hover:after{
+			width: 100%;
+			
+		}
+
+		.logo{
+            display: flex;
+            position: absolute;
+            top: -95px;
+            margin: auto;
+            padding: 30px;
+        }
+
+		.tcgc, .bscs{
+			display: flex;
+			justify-content: space-evenly;
+			position: relative;
+			bottom: -120px;
+			right: -640px;
+			margin: auto;
+			height: 60px;
+			cursor: pointer;
+		}
+
+		.dropdown_menu{
+			display: none;
+		}
+
+		.navbar ul li:hover .dropdown_menu{
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 100%;
+			background-color: #195E2F;
+		}
+
+		.dropdown_menu ul{
+			display: block;
+			margin: 10px;
+		}
+
+		.dropdown_menu ul li{
+			width: 150px;
+			padding: 10px;
+		}
+		
+        .about{
+            display: flex;
+			height: 0;
+			width: 90%;
+			justify-items: center;
+			align-items: center;
+			font-size: 40px;
+			padding: 70px;
+			text-align: justify;
+        }
+        
+		.title{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<nav class="navbar">
+			<img src="mlogo.png" style="height: 250px" alt="tcgc_logo">
+			<ul class="menu">
+				<li><a href="home.html" type="activate">Home</a></li>
+				<li><a href="#">Gallery <i class="fas fa-caret-down"></i></a>
+					<div class="dropdown_menu">
+						<ul>
+							<li><a href="photos.html">Photos</a></li>
+							<li><a href="videos.html">Videos</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="index.html">Logout</a></li>
+			</ul>
+		</nav>
+		
+	</div>
+
+	<div class="title"><img src="1.png" style="width: 600px;" alt="luxmundis cup"></div>
+
+    <div class="about">
+		<p>Tangub City Global College's Luxmundis Cup 2023 is an annual celebration of trust and friendship 
+			of the students united together showing their different skills and sportmanship. 
+			It serves as the way to connect with other people, making mutualistic relationship 
+			and for everyone's personal growth.</p>
+	</div>
+	
+
+	<div>
+		<a href="https://web.facebook.com/groups/617470232285960" target="_blank"><img class="bscs" src="institute_logo.png" alt="BSCS Logo"></a>
+		<a href="https://web.facebook.com/tcgcluxmundi" target="_blank"><img class="tcgc" src="tcgc_logo.png" alt="TCGC Logo"></a>
+	</div>
+</body>
+</html>
